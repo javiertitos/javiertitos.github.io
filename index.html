@@ -13,13 +13,13 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-/* 🧱 layout */
+/* layout */
 .container {
   display: flex;
   height: 100vh;
 }
 
-/* 📜 storytelling */
+/* Storytelling */
 .mainStory {
   width: 30%;
   height: 100vh;
@@ -27,7 +27,18 @@ body, html {
   border-right: 1px solid #ddd;
 }
 
-/* 📖 steps */
+/* Pasos */
+.titulo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+
+/* Pasos */
 .step {
   height: 100vh;
   display: flex;
@@ -38,6 +49,7 @@ body, html {
   border-bottom: 1px solid #eee;
 }
 
+/* Botón retroceso */
 .back-button {
   position: fixed;
   top: 20px;
@@ -55,7 +67,7 @@ body, html {
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-/* 📊 gráfico fijo */
+/* Gráfico fijo */
 #chart {
   position: fixed;
   top: 50%;
@@ -73,6 +85,10 @@ body, html {
 <div class="container">
 
   <div class="mainStory" id="mainStory">
+
+    <section class="titulo">
+      <h1>Turismo en Portugal 2015-2017</h2>
+    </section>
 
     <section class="step" data-step="1">
       <h2>🌍 Zona geográfica de huéspedes</h2>
