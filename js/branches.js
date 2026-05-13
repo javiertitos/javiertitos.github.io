@@ -133,19 +133,19 @@ function branchCity(datos) {
   branch.innerHTML = `
 
     <section class="step branch-step" data-branch="1">
-      <h2>🏖 Resort · Países más rentables por noche</h2>
+      <h2>🏨 City · Países más rentables por noche</h2>
       <p>Top países con mayor ADR medio por reserva, incluyendo número de reservas,
       de cancelaciones y porcentaje de cancelaciones</p>
     </section>
 
     <section class="step branch-step" data-branch="2">
-      <h2>🏖 Resort · Países más rentables por reserva</h2>
+      <h2>🏨 City · Países más rentables por reserva</h2>
       <p>Top países con mayor Revenue medio por reserva, incluyendo número de reservas,
       de cancelaciones y porcentaje de cancelaciones</p>
     </section>
 
     <section class="step branch-step" data-branch="3">
-      <h2>🏖 Resort · Rentabilidad por tipo de viaje</h2>
+      <h2>🏨 City · Rentabilidad por tipo de viaje</h2>
       <p>ADR y Revenue medio por tipo de viaje</p>
     </section>
 
