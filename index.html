@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Hotel Storytelling</title>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<style>
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* 🧱 layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* 📜 storytelling */
+.mainStory {
+  width: 30%;
+  height: 100vh;
+  overflow-y: scroll;
+  border-right: 1px solid #ddd;
+}
+
+/* 📖 steps */
+.step {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+
+  background: #333;
+  color: white;
+  cursor: pointer;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* 📊 gráfico fijo */
+#chart {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 65%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="mainStory" id="mainStory">
+
+    <section class="step" data-step="1">
+      <h2>🌍 Zona geográfica de huéspedes</h2>
+      <p class="subtitle">
+        Analizamos de qué regiones provienen las reservas realizadas en el hotel.
+      </p>
+    </section>
+
+    <section class="step" data-step="2">
+      <h2>🌎 Países y tipo de viaje</h2>
+      <p class="subtitle">
+        Identificamos los países con mayor volumen de reservas y su propósito de viaje.
+      </p>
+    </section>
+
+    <section class="step" data-step="3">
+      <h2>📅 Evolución de reservas en el tiempo</h2>
+      <p class="subtitle">
+        Observa cómo varían las reservas según el tipo de hotel a lo largo del tiempo.
+      </p>
+
+      <div class="controls">
+        <p class="controls-title">Cambiar vista:</p>
+        <div class="controls-buttons">
+          <button id="btnStackedNormal">🏙 City abajo</button>
+          <button id="btnStackedReverse">🏖 Resort abajo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-step="4">
+      <h2>🏨 Procedencia por tipo de hotel</h2>
+      <p class="subtitle">
+        Comparamos el origen de los huéspedes según el tipo de hotel reservado.
+      </p>
+    </section>
+
+    <section class="step" data-step="5">
+      <h2>❌ Cancelaciones por origen</h2>
+      <p class="subtitle">
+        Analizamos cómo varía la tasa de cancelación según el país de procedencia.
+      </p>
+    </section>
+
+    <section class="step" data-step="6">
+      <h2>📈 Datos relevantes por tipo de hotel</h2>
+
+      <p class="subtitle">
+        Datos que, en lugar de una visión más general, ofrecen una visión relevante
+        para los profesionales del sector turístico permitiéndoles maximizar la eficiencia.
+      </p>
+
+      <div class="controls">
+        <div class="controls-buttons">
+          <button id="btnResort">🏖 Resort Hotel</button>
+          <button id="btnCity">🏙 City Hotel</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div id="branchStory" class="mainStory" style="display:none;"></div>
+
+  <div id="chart">
+    <p style="padding:20px;">📊 Haz scroll para ver las visualizaciones</p>
+  </div>
+
+  <button id="btnBack" class="back-button" style="display:none;">
+    ⬅ Volver
+  </button>
+
+</div>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
